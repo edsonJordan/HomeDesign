@@ -57,7 +57,7 @@
   width: 0;
 }
 body{
-    width: calc(100% - calc(100% - 100vw));
+  width: calc(100vw - (100vw - 100%));
     height: 100vh;
     padding: 0px;
     margin: 0px;    
@@ -164,12 +164,12 @@ input{
     position: fixed;
     z-index: 40;
     display: flex;
-    max-width: 100%;
+    width: 100%;
     background-color: var(--color-white-dark);
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: .2rem 1.5rem;
+    /* padding: .2rem 1.5rem; */
 }
 .navigation.active{
     background-color: var(--color-white);
@@ -190,7 +190,7 @@ input{
     z-index: 20;
     flex-direction: column;
     align-items: center;
-    padding: .8rem 1rem;
+    padding: .8rem 2.5rem;
     row-gap: .5rem;
 }
 
@@ -213,7 +213,7 @@ input{
     height: 40px;
     justify-content: space-evenly;    
     z-index: 30;
-    padding: .8rem 1rem;
+    padding: .8rem 2.5rem;
 }
 .btn-navigation.active .bar:nth-child(1){
     position: relative;
@@ -356,7 +356,7 @@ input{
   }
   @media screen and (max-width: 992px) {
     .blog-slider {
-      max-width: 680px;
+      width: 100vw;
       height: 400px;
     }
   }
@@ -463,17 +463,17 @@ input{
     border-radius: 20px;
     transition: all 0.3s;
   }
-  @media screen and (max-width: 768px) {
-    .blog-slider__img {
-      transform: translateY(-50%);
-      width: 90%;
-    }
+  .blog-slider__img {
+    transform: translateY(-50%);
+    width: 90%;
   }
+  .blog-slider__img {
+    width: 95%;
+    height: 80%;
+  }
+
   @media screen and (max-width: 576px) {
-    .blog-slider__img {
-      width: 95%;
-      height: 80%;
-    }
+    
   }
   @media screen and (max-height: 500px) and (min-width: 992px) {
     .blog-slider__img {
@@ -592,6 +592,7 @@ input{
 /* Section Before and After */
 .section__beforeANDafter{
     height: 80vh;
+    row-gap: 2rem;
 }
 .section__about--text h2{
   font-size: 1.6em;
@@ -635,7 +636,7 @@ input{
     font-size: 1.2em;
     line-height: 1.6em;
     font-weight: 400;
-    padding: 1.9rem 0;
+    padding: 1.9rem 1rem;
     color: var(--color-primary);
 }
 .card__beforeANDafter b{
@@ -670,6 +671,210 @@ input{
 
 /* End Section Message */
 
+/* Start Section Footer */
+  .section__footer{
+    max-width: 100%;
+  }
+
+  .content__footer{
+    display: flex;
+   height: 100vh;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .content__footer--tittle, .content__footer--links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+  }
+  .content__footer--tittle h2{
+    font-weight: 800;
+    font-size:1.6em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+  .content__footer--tittle a{
+    font-weight: 700;
+    font-size:1.3rem;
+    color: var(--color-primary);
+  }
+  .footer__block{
+  text-align: center;
+  }
+  .footer__block h3{
+    font-weight: 600;
+    font-size:1.4rem;
+    color: var(--color-primary);
+  }
+  .footer__block span{
+    font-weight: 400;
+    font-size:1.4rem;
+    color: var(--color-secondary);
+  }
+  .footer {
+
+  }
+  /* En Section Footer */
+
+@media (min-width: 768px) {  
+
+  .logo{
+    width: 10%;
+  }
+  .btn-navigation {
+    width: 5%;
+  }
+  .section__frontpage {
+    justify-content: end;
+  }
+.content__frontpage{
+  left: auto;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  position: relative;
+  justify-content: center;
+
+}
+  .content__frontpage .h1{
+    padding: 2rem 0;
+    height: auto;
+    text-align: center;
+    font-size: 1.9em;
+    }
+    .content__about{
+      text-align: center;
+    }
+
+    /* .blog-slider{
+      max-width: initial;
+      width: 100%;
+    } */
+    .swiper-container-fade .swiper-slide{
+      flex-direction: column;
+    }
+    .swiper-container-fade .swiper-slide{
+      width: 90vw;
+    }
+    .blog-slider__img{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 80%;
+    }
+    .blog-slider__img img{
+      align-self: center;
+    }
+    .blog-slider__content{
+      text-align: center;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 10px 4px !important;
+    }
+    .blog-slider{
+        width: 100% !important;
+    }
+    .content__menssage{
+      padding: 0;
+      text-align: center;
+    }
+    .span__menssage{
+      text-align: center;
+      font-size: 2em;
+    }
+    .section__menssage{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://res.cloudinary.com/sunqupacha/image/upload/v1644441782/portafolio/HomeDesign/Images/image_section.mensaje.min_esos9g.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+  }
+
+  .section__beforeANDafter--cards{
+    padding: 0;
+    width: 100%;
+    justify-content: space-evenly;
+    column-gap: 0;
+    overflow-x: hidden;
+    row-gap: 2rem;
+}
+.card__beforeANDafter{
+    min-width: auto;
+    width: 28%;
+}
+.card__beforeANDafter span{
+  line-height: 1.4em;
+}
+
+
+
+}
+
+
+        @media (min-width: 1024px) { 
+          .logo{
+            width: 6%;
+          }
+          .btn-navigation{
+            width: 3%;
+          }
+          .blog-slider{
+            background-color: initial;
+          }
+          .blog-slider__content{
+            width: 80%;
+          }
+
+          .content__about .span{
+            align-self: center;
+            width: 60%;
+          }
+          .section__menssage{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+          }
+          .content__menssage{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+          .span__menssage{
+            width: 60%;
+          }
+
+          .content__footer{
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+          }
+          .content__footer--tittle, .content__footer--links{
+            justify-content: space-between;
+            height: 25%;
+          }
+          .content__footer--tittle h2 {
+            font-size: 2.5em;
+          }
+          .content__footer--tittle a{
+            font-size: 1.5em;
+          }
+          .footer__block{
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.2rem;
+            font-size: 1.3em;
+            width: 90%;
+            text-align: left;
+          }
+         
+        } 
+
+        @media (min-width: 1424px) {
+
+        }
 
 .none{
     display: none;
