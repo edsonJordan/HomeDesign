@@ -467,10 +467,7 @@ input{
     transform: translateY(-50%);
     width: 90%;
   }
-  .blog-slider__img {
-    width: 95%;
-    height: 80%;
-  }
+  
 
   @media screen and (max-width: 576px) {
     
@@ -803,7 +800,7 @@ input{
 }
 .card__beforeANDafter{
     min-width: auto;
-    width: 28%;
+    width: 22%;
 }
 .card__beforeANDafter span{
   line-height: 1.4em;
@@ -868,6 +865,17 @@ input{
             font-size: 1.3em;
             width: 90%;
             text-align: left;
+          }
+
+          .blog-slider__img {
+            width: 60%;
+            height: 140%;
+          }
+          .blog-slider__content{
+            width: 60%;
+          }
+          .blog-slider__item {
+            height: 200px !important;
           }
          
         } 
